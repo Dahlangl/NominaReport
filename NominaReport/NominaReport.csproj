@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AF9770B-DE9D-470A-A70E-1FC0789D864B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NominaReport</RootNamespace>
+    <AssemblyName>NominaReport</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ReaLTaiizor, Version=3.8.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReaLTaiizor.3.8.0.2\lib\net48\ReaLTaiizor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\mdiProperties.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\frmAggEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\frmAggEmpleado.Designer.cs">
+      <DependentUpon>frmAggEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\frmConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\frmConceptos.Designer.cs">
+      <DependentUpon>frmConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\frmCrearReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\frmCrearReportes.Designer.cs">
+      <DependentUpon>frmCrearReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\frmReportMasiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\frmReportMasiv.Designer.cs">
+      <DependentUpon>frmReportMasiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\frmReportVwr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\frmReportVwr.Designer.cs">
+      <DependentUpon>frmReportVwr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="welcmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcmForm.Designer.cs">
+      <DependentUpon>welcmForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\frmAggEmpleado.resx">
+      <DependentUpon>frmAggEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\frmConceptos.resx">
+      <DependentUpon>frmConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\frmCrearReportes.resx">
+      <DependentUpon>frmCrearReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\frmReportMasiv.resx">
+      <DependentUpon>frmReportMasiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\frmReportVwr.resx">
+      <DependentUpon>frmReportVwr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcmForm.resx">
+      <DependentUpon>welcmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{4851565f-0134-465b-8a2a-0646f8fd8a2c}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{a020cc69-7573-4fb3-aaf1-38710d92a2c2}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contactscolaboradores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nominas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShareLogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Closeclose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check AllselectAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shapeajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentDocuments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\External LinkEnviar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FolderVerArchivos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShareLogout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload To The CloudCargar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shapehome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shapeinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchBuscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shapeagregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShapeconfirmarSeleccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shapeeditar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShapelinesBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloq1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ContactsUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgWelcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgWelcm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo reducido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
