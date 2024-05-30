@@ -10,13 +10,49 @@ namespace DataAccess.SqlServer
 {
     public class ObjectsDao:ConnectionToSql
     {
-        public DataTable cargarEmpleadosCbox()
+        public DataTable cargarEmpleados()
         {
             using (var connection = GetConnection())
             {
                 connection.Open();
-                SqlDataAdapter dtAdapter = new SqlDataAdapter("SP_OBTNRCOLAB", connection);
-                dtAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbColabores", connection);
+                dtAdapter.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                dtAdapter.Fill(dt);
+                return dt;
+            }
+        }
+        public DataTable cargarRazonSocial()
+        {
+            using (var connection = GetConnection()) 
+            {
+                connection.Open();
+                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbSucursales", connection);
+                dtAdapter.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                dtAdapter.Fill(dt);
+                return dt;
+            }
+        }
+        public DataTable cargarNominaTipos()
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbNominaTipo", connection);
+                dtAdapter.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                dtAdapter.Fill(dt);
+                return dt;
+            }
+        }
+        public DataTable cargarNominaConceptos()
+        {
+            using (var connection = GetConnection()) 
+            {
+                connection.Open();
+                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM dtNominaConceptos", connection);
+                dtAdapter.SelectCommand.CommandType= CommandType.Text;
                 DataTable dt = new DataTable();
                 dtAdapter.Fill(dt);
                 return dt;

@@ -22,9 +22,10 @@ namespace NominaReport.Modulos
         private void frmCrearReportes_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
-            cboxColaborador.DataSource = objectsDao.cargarEmpleadosCbox();
+            cboxColaborador.DataSource = objectsDao.cargarEmpleados();
             cboxColaborador.DisplayMember = "nomColab";
             cboxColaborador.ValueMember = "colabId";
+            cboxRazonSocial.DataSource 
         }
 
         private void cboxColaborador_SelectedIndexChanged(object sender, EventArgs e)

@@ -12,9 +12,21 @@ namespace Dominio
     public class ObjectsModel
     {
         ObjectsDao objectsDao = new ObjectsDao();
-        public DataTable cargarEmpleadosCbox()
+        public DataTable cargarEmpleados()
         {
-            return objectsDao.cargarEmpleadosCbox();
+            return objectsDao.cargarEmpleados();
+        }
+        public DataTable cargarRazonSocial()
+        {
+            return objectsDao.cargarRazonSocial();
+        }
+        public DataTable cargarNominaTipos()
+        {
+            return objectsDao.cargarNominaTipos();
+        }
+        public DataTable cargarNominaConceptos()
+        {
+            return objectsDao.cargarNominaConceptos();
         }
     }
 }
