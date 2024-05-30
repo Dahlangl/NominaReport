@@ -251,7 +251,7 @@
             this.menuNominas.Location = new System.Drawing.Point(0, 140);
             this.menuNominas.Margin = new System.Windows.Forms.Padding(0);
             this.menuNominas.Name = "menuNominas";
-            this.menuNominas.Size = new System.Drawing.Size(170, 160);
+            this.menuNominas.Size = new System.Drawing.Size(170, 40);
             this.menuNominas.TabIndex = 15;
             // 
             // panel1
@@ -374,7 +374,7 @@
             this.menuDatosMaestros.Controls.Add(this.panel4);
             this.menuDatosMaestros.Controls.Add(this.panel8);
             this.menuDatosMaestros.Controls.Add(this.panel9);
-            this.menuDatosMaestros.Location = new System.Drawing.Point(0, 300);
+            this.menuDatosMaestros.Location = new System.Drawing.Point(0, 180);
             this.menuDatosMaestros.Margin = new System.Windows.Forms.Padding(0);
             this.menuDatosMaestros.Name = "menuDatosMaestros";
             this.menuDatosMaestros.Size = new System.Drawing.Size(170, 40);
@@ -469,7 +469,7 @@
             // 
             this.pnlCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.pnlCerrarSesion.Controls.Add(this.btnLogout);
-            this.pnlCerrarSesion.Location = new System.Drawing.Point(0, 340);
+            this.pnlCerrarSesion.Location = new System.Drawing.Point(0, 220);
             this.pnlCerrarSesion.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCerrarSesion.Name = "pnlCerrarSesion";
             this.pnlCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
