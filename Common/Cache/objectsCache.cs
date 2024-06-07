@@ -9,4 +9,5 @@ namespace Common.Cache
     internal class objectsCache
     {
     }
+
 }

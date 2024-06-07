@@ -108,6 +108,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\rptNominaColab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptNominaColab.Designer.cs">
+      <DependentUpon>rptNominaColab.cs</DependentUpon>
+    </Compile>
     <Compile Include="welcmForm.cs">
       <SubType>Form</SubType>
     </Compile>

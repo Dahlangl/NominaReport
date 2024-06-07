@@ -15,7 +15,7 @@ namespace DataAccess.SqlServer
             using (var connection = GetConnection())
             {
                 connection.Open();
-                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbColabores", connection);
+                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbColaboradores", connection);
                 dtAdapter.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 dtAdapter.Fill(dt);
@@ -51,7 +51,7 @@ namespace DataAccess.SqlServer
             using (var connection = GetConnection()) 
             {
                 connection.Open();
-                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM dtNominaConceptos", connection);
+                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbNominaConceptos", connection);
                 dtAdapter.SelectCommand.CommandType= CommandType.Text;
                 DataTable dt = new DataTable();
                 dtAdapter.Fill(dt);
