@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace Common.Cache
 {
-    internal class objectsCache
+    public static class ObjectsCache
     {
+        public static DataTable Empleados { get; set; }
+        public static DataTable RazonSocial { get; set; }
+        public static DataTable NominaTipos { get; set; }
+        public static DataTable NominaConceptos { get; set; }
     }
-
 }

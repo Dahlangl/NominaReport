@@ -50,6 +50,7 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 100);
             this.panel1.TabIndex = 0;
@@ -68,6 +69,7 @@
             // 
             this.pictureBox2.Image = global::NominaReport.Properties.Resources.logo;
             this.pictureBox2.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(114, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,6 +118,7 @@
             // 
             this.pictureBox1.Image = global::NominaReport.Properties.Resources.bgWelcm;
             this.pictureBox1.Location = new System.Drawing.Point(-2, 66);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(454, 442);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -86,5 +86,20 @@ namespace NominaReport.Modulos
             cboxConceptos.DisplayMember = "nomConceptoDes";
             cboxConceptos.ValueMember = "nomConceptoId";
         }
+
+        private void btnAggConcepto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            cboxColaborador.Text = string.Empty;
+            cboxConceptos.Text = string.Empty;
+            cboxNomina.Text = string.Empty;
+            cboxRznSocial.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            detalleNomina.Rows.Clear();
+        }
     }
 }

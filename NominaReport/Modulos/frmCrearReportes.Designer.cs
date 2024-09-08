@@ -33,7 +33,7 @@
             this.btnCrear = new System.Windows.Forms.Button();
             this.pnlCont = new System.Windows.Forms.Panel();
             this.pnlCrear = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlBotones = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.pnlRegistro = new System.Windows.Forms.Panel();
@@ -59,7 +59,7 @@
             this.pnlHeader.SuspendLayout();
             this.pnlCont.SuspendLayout();
             this.pnlCrear.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlBotones.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detalleNomina)).BeginInit();
             this.pnlHistorial.SuspendLayout();
@@ -72,6 +72,7 @@
             this.pnlHeader.Controls.Add(this.lblTitulo);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(830, 66);
             this.pnlHeader.TabIndex = 1;
@@ -116,7 +117,7 @@
             // 
             // pnlCrear
             // 
-            this.pnlCrear.Controls.Add(this.panel1);
+            this.pnlCrear.Controls.Add(this.pnlBotones);
             this.pnlCrear.Controls.Add(this.pnlRegistro);
             this.pnlCrear.Controls.Add(this.pnlHistorial);
             this.pnlCrear.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -125,17 +126,18 @@
             this.pnlCrear.Size = new System.Drawing.Size(830, 423);
             this.pnlCrear.TabIndex = 6;
             // 
-            // panel1
+            // pnlBotones
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.btnLimpiar);
-            this.panel1.Controls.Add(this.btnCrear);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(235, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(595, 69);
-            this.panel1.TabIndex = 18;
+            this.pnlBotones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBotones.Controls.Add(this.btnCancelar);
+            this.pnlBotones.Controls.Add(this.btnLimpiar);
+            this.pnlBotones.Controls.Add(this.btnCrear);
+            this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBotones.Location = new System.Drawing.Point(235, 0);
+            this.pnlBotones.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBotones.Name = "pnlBotones";
+            this.pnlBotones.Size = new System.Drawing.Size(595, 69);
+            this.pnlBotones.TabIndex = 18;
             // 
             // btnCancelar
             // 
@@ -170,6 +172,7 @@
             this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // pnlRegistro
             // 
@@ -188,6 +191,7 @@
             this.pnlRegistro.Controls.Add(this.cboxColaborador);
             this.pnlRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRegistro.Location = new System.Drawing.Point(235, 0);
+            this.pnlRegistro.Margin = new System.Windows.Forms.Padding(0);
             this.pnlRegistro.Name = "pnlRegistro";
             this.pnlRegistro.Size = new System.Drawing.Size(595, 423);
             this.pnlRegistro.TabIndex = 1;
@@ -264,6 +268,7 @@
             this.btnAggConcepto.TabIndex = 5;
             this.btnAggConcepto.Text = "Agregar";
             this.btnAggConcepto.UseVisualStyleBackColor = false;
+            this.btnAggConcepto.Click += new System.EventHandler(this.btnAggConcepto_Click);
             // 
             // detalleNomina
             // 
@@ -338,6 +343,7 @@
             this.pnlHistorial.Controls.Add(this.historialNomina);
             this.pnlHistorial.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlHistorial.Location = new System.Drawing.Point(0, 0);
+            this.pnlHistorial.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHistorial.Name = "pnlHistorial";
             this.pnlHistorial.Size = new System.Drawing.Size(235, 423);
             this.pnlHistorial.TabIndex = 0;
@@ -368,6 +374,7 @@
             this.pnlFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Location = new System.Drawing.Point(0, 423);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(830, 80);
             this.pnlFooter.TabIndex = 5;
@@ -387,7 +394,7 @@
             this.pnlHeader.PerformLayout();
             this.pnlCont.ResumeLayout(false);
             this.pnlCrear.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnlBotones.ResumeLayout(false);
             this.pnlRegistro.ResumeLayout(false);
             this.pnlRegistro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detalleNomina)).EndInit();
@@ -424,7 +431,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nominaConceptoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn nominaConcepto;
         private System.Windows.Forms.DataGridViewTextBoxColumn reporteNomDetalleCantidad;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlBotones;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnLimpiar;
     }

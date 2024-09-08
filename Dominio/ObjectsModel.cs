@@ -12,21 +12,41 @@ namespace Dominio
     public class ObjectsModel
     {
         ObjectsDao objectsDao = new ObjectsDao();
+
         public DataTable cargarEmpleados()
         {
-            return objectsDao.cargarEmpleados();
+            if (Common.Cache.ObjectsCache.Empleados == null)
+            {
+                Common.Cache.ObjectsCache.Empleados = objectsDao.cargarEmpleados();
+            }
+            return Common.Cache.ObjectsCache.Empleados;
         }
+
         public DataTable cargarRazonSocial()
         {
-            return objectsDao.cargarRazonSocial();
+            if (Common.Cache.ObjectsCache.RazonSocial == null)
+            {
+                Common.Cache.ObjectsCache.RazonSocial = objectsDao.cargarRazonSocial();
+            }
+            return Common.Cache.ObjectsCache.RazonSocial;
         }
+
         public DataTable cargarNominaTipos()
         {
-            return objectsDao.cargarNominaTipos();
+            if (Common.Cache.ObjectsCache.NominaTipos == null)
+            {
+                Common.Cache.ObjectsCache.NominaTipos = objectsDao.cargarNominaTipos();
+            }
+            return Common.Cache.ObjectsCache.NominaTipos;
         }
+
         public DataTable cargarNominaConceptos()
         {
-            return objectsDao.cargarNominaConceptos();
+            if (Common.Cache.ObjectsCache.NominaConceptos == null)
+            {
+                Common.Cache.ObjectsCache.NominaConceptos = objectsDao.cargarNominaConceptos();
+            }
+            return Common.Cache.ObjectsCache.NominaConceptos;
         }
     }
 }

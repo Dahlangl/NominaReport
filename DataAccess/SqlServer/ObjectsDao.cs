@@ -8,55 +8,82 @@ using System.Threading.Tasks;
 
 namespace DataAccess.SqlServer
 {
-    public class ObjectsDao:ConnectionToSql
+    public class ObjectsDao : ConnectionToSql
     {
         public DataTable cargarEmpleados()
         {
-            using (var connection = GetConnection())
+            if (Common.Cache.ObjectsCache.Empleados == null) // Verifica si está en caché
             {
-                connection.Open();
-                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbColaboradores", connection);
-                dtAdapter.SelectCommand.CommandType = CommandType.Text;
-                DataTable dt = new DataTable();
-                dtAdapter.Fill(dt);
-                return dt;
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+                    SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbColaboradores", connection);
+                    dtAdapter.SelectCommand.CommandType = CommandType.Text;
+                    DataTable dt = new DataTable();
+                    dtAdapter.Fill(dt);
+
+                    // Guardar en caché
+                    Common.Cache.ObjectsCache.Empleados = dt;
+                }
             }
+            return Common.Cache.ObjectsCache.Empleados; // Devuelve los datos desde el caché
         }
+
         public DataTable cargarRazonSocial()
         {
-            using (var connection = GetConnection()) 
+            if (Common.Cache.ObjectsCache.RazonSocial == null)
             {
-                connection.Open();
-                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbSucursales", connection);
-                dtAdapter.SelectCommand.CommandType = CommandType.Text;
-                DataTable dt = new DataTable();
-                dtAdapter.Fill(dt);
-                return dt;
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+                    SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbSucursales", connection);
+                    dtAdapter.SelectCommand.CommandType = CommandType.Text;
+                    DataTable dt = new DataTable();
+                    dtAdapter.Fill(dt);
+
+                    // Guardar en caché
+                    Common.Cache.ObjectsCache.RazonSocial = dt;
+                }
             }
+            return Common.Cache.ObjectsCache.RazonSocial;
         }
+
         public DataTable cargarNominaTipos()
         {
-            using (var connection = GetConnection())
+            if (Common.Cache.ObjectsCache.NominaTipos == null)
             {
-                connection.Open();
-                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbNominaTipo", connection);
-                dtAdapter.SelectCommand.CommandType = CommandType.Text;
-                DataTable dt = new DataTable();
-                dtAdapter.Fill(dt);
-                return dt;
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+                    SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbNominaTipo", connection);
+                    dtAdapter.SelectCommand.CommandType = CommandType.Text;
+                    DataTable dt = new DataTable();
+                    dtAdapter.Fill(dt);
+
+                    // Guardar en caché
+                    Common.Cache.ObjectsCache.NominaTipos = dt;
+                }
             }
+            return Common.Cache.ObjectsCache.NominaTipos;
         }
+
         public DataTable cargarNominaConceptos()
         {
-            using (var connection = GetConnection()) 
+            if (Common.Cache.ObjectsCache.NominaConceptos == null)
             {
-                connection.Open();
-                SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbNominaConceptos", connection);
-                dtAdapter.SelectCommand.CommandType= CommandType.Text;
-                DataTable dt = new DataTable();
-                dtAdapter.Fill(dt);
-                return dt;
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+                    SqlDataAdapter dtAdapter = new SqlDataAdapter("SELECT * FROM tbNominaConceptos", connection);
+                    dtAdapter.SelectCommand.CommandType = CommandType.Text;
+                    DataTable dt = new DataTable();
+                    dtAdapter.Fill(dt);
+
+                    // Guardar en caché
+                    Common.Cache.ObjectsCache.NominaConceptos = dt;
+                }
             }
+            return Common.Cache.ObjectsCache.NominaConceptos;
         }
     }
 }
